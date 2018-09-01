@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Procurrency currency converter</title>
+        <link rel="manifest" href="./manifest.json" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Procurrency Currency Converter">
+        <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#3367D6" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link rel="icon" sizes="192x192" href="./images/icons/icon-192.png"/>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="192x192" href="./images/icons/icon-192.png"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="./static/css/main.css" />
+        <script src="./static/js/idb.js"></script>
+        <script src="./static/js/main.js"></script>
+        <meta name="msapplication-TileImage" content="./images/icons/icon-144.png" />
+        <meta name="msapplication-TileColor" content="#26c6da" />
+    </head>
+    <header class="header">
+        <h1 class="header_title">Procurrency Mobile Currency converter</h1>
+        <p class="header_subtitle">Mobile currency convertion progressive web app</p>
+    </header>
+    <body onload="window.scrollTo(0, 1);">
+        <div class="card">
+                <form id="input_form" onsubmit="return convert()" class="container">
+                        <div class="box tos">
+                                <label for="from_currency">Source ammount:</label>
+                                <select id="from_currency" form="input_form" onchange="convert();" />
+                                <input aria-label="Ammount to convert" type="number" name="from_ammount" id="from_ammount" placeholder="Source currency ammount" autofocus autocomplete="off" form="input_form" oninput="convert();" />
+                        </div>
+                        <div class="box froms">
+                                <label for="to_currency">Converted ammount:</label>
+                                <select id="to_currency" form="input_form" onchange="convert();" />
+                                <input aria-label="Converted ammount" type="number" disabled="disabled" name='to_ammount' id="to_ammount" placeholder="Enter details and press convert" form="input_form" oninput="convert();" />
+                        </div>
+                        <div class="box c_btn">
+                                <button class="btn" onclick="convert();" form="input_form" id="convert_btn" hidden>convert</button>
+                        </div>
+                    </form>
+        </div>
+
+        <footer>
+            <caption>
+                <div class="attribution">
+                    Favicon and app icon Made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+                </div>
+            </caption>
+        </footer>
+        <script>
+            //get from currency list from db or net
+            get_currencies();
+        </script>
+        
+        <div class="toast" hidden>
+                <p class="update_message" id="update_message" hidden>The app has been updated. Refresh to use it.</p>
+                <p class="install_message" id="install_message" hidden>Can we install the app to your homescreen?</p>
+                <div class="update_btns">
+                    <button class="update_refresh">Refresh</button>
+                    <button class="update_dismiss">Dismiss</button>
+                </div>
+                <div class="update_btns">
+                    <button class="install_yess">Yes</button>
+                    <button class="install_no">No</button>
+                </div>
+            </div>
+    </body>
+</html>

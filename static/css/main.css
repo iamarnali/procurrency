@@ -1,0 +1,161 @@
+@font-face{font-family:'Roboto';
+    font-style:normal;
+    font-weight:400;
+    src:local("Roboto"),local("Roboto-Regular"),url("https://fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff") format("woff")}
+    @font-face{font-family:'Roboto';
+    font-style:normal;font-weight:700;
+    src:local("Roboto Bold"),
+    local("Roboto-Bold"),url("https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff") format("woff")}
+html{background:#fafafa}
+html,body{
+    margin:0;
+    min-height: 480px;
+    padding:0;
+    align-content: center;
+    text-align: center;
+    font-family:roboto, sans-serif;-webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+
+h1 { 
+    padding: 4px; 
+    background: #333333; 
+    color: #AAAAAA; 
+    border-bottom: 2px solid #AAAAAA; 
+    margin: 0 0 4px 0; 
+    }
+footer {
+    font-size: 0.7em;
+}
+
+@media screen and (min-width: 591px){
+    form {
+        display: grid;
+        grid-template-columns: 2;
+        grid-gap: 10px;
+        grid-template-rows: 1;
+      }
+      .tos {
+        display: grid;
+        grid-template-columns: 1;
+        grid-gap: 10px;
+        grid-template-rows: 3;
+        grid-column: 1;
+        grid-row: 1;
+      }
+      
+      .froms {
+        display: grid;
+        grid-template-columns: 1;
+        grid-gap: 10px;
+        grid-template-rows: 3;
+        grid-column: 2;
+        grid-row: 1;
+      }
+      input[type=number]{
+          -moz-appearance: textfield;
+          background-color: rgba(45, 151, 177, 0.575);
+          width: 100%;
+          min-width: 48px;
+          min-height: 48px;
+          grid-column: 1;
+          grid-row: 3;
+      }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button{
+          -webkit-appearance: textfield;
+          width: 0%;
+      }
+      input.invalid { 
+          background: url(exclamation.png) no-repeat 2px 2px; 
+          min-width: 48px;
+          min-height: 48px;
+      } 
+      
+      label{
+          width: 50%;
+          grid-column: 1;
+          grid-row: 1;
+      }
+      
+      select {
+          width: 100%;
+          min-width: 48px;
+          min-height: 48px;
+          padding: 1.5em;
+          grid-column: 1;
+          grid-row: 2;
+        }
+}
+
+@media screen and (max-width: 590px){
+    input[type=number]{
+        -moz-appearance: textfield;
+        background-color: rgba(45, 151, 177, 0.575);
+        width: 100%;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 1.5em;
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button{
+        -webkit-appearance: textfield;
+        width: 0%;
+    }
+    input.invalid { 
+        background: url(exclamation.png) no-repeat 2px 2px; 
+        padding-left: 22px; 
+        width: 100%;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 1.5em;
+    } 
+    #errors { 
+        margin: 8px 6px 2px 6px; 
+        padding: 6px 14px; 
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, 
+        #cc0000), color-stop(0.7, #770022)); 
+        -webkit-border-radius: 4px; 
+        color: white; 
+        display: none; 
+      } 
+    .btn {
+        width: 100%;
+        background-color: #4285f4;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 1.5em;
+      }
+      
+      .btn:hover {
+        background-color: #296CDB;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 1.5em;
+      }
+      
+      .btn:focus {
+        background-color: #0F52C1;
+    
+        outline: 0;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 1.5em;
+      }
+      
+      .btn:active {
+        background-color: #0039A8;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 1.5em;
+      }
+      select {
+        width: 100%;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 1.5em;
+      }
+      label{
+        width: 100%;
+      }
+}
+
