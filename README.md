@@ -1,3 +1,4 @@
+Amazon Hackathon 2014
 # Introduction
 Procurrency is an offline first Progressive Web App.  
 It uses the [freecurrencyconverter api](https://free.currencyconverterapi.com) to acquire a list of available currencies  
